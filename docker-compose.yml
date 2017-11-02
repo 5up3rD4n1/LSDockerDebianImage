@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  debian:
+    build: .
+    image: labexperimental/debian:jessie
