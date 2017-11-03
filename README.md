@@ -6,6 +6,6 @@ Docker files to create LS Debian Image
   `docker-compose build`
 # Run image from compose
   `docker-compose up`
-# Inspect the image with bash
+# Inspect the container with bash
   `docker exec -it <docker-image name or id> bash`
     
