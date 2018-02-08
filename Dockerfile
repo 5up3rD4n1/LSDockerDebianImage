@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM python:3.6.4-jessie
 
 MAINTAINER LabExperimental <librescan@gmail.com>
 
@@ -7,12 +7,11 @@ ADD ./ /tmp/ls
 WORKDIR /tmp/ls
 
 RUN apt-get update && \
-    apt-get -y install python3-pip lua5.2 liblua5.2 libusb-dev python3 python-dev \
+    apt-get -y install lua5.2 liblua5.2 libusb-dev \
     libjpeg-dev libssl-dev libffi-dev libturbojpeg1 libturbojpeg1-dev libyaml-dev scantailor \
     make gcc git tesseract-ocr tesseract-ocr-spa ruby ruby-dev ruby-rmagick && \
-    pip3 install cffi && \
-    gem install iconv pdfbeads && \
-    sh misc/chdkptp.sh
+    pip install cffi && \
+    gem install iconv pdfbeads
 
 WORKDIR /
 
